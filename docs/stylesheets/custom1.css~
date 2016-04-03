@@ -1,0 +1,4 @@
+.arcadia-development {
+	width: 250px
+	overflow:hidden
+}

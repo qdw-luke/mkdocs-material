@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if lt IE 7 ]> <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     {% block htmltitle %}
       {% if page_title %}
         <title>{{ page_title }} - {{ site_name }}</title>
@@ -34,7 +35,7 @@
     {% if config.extra.logo %}
       <link rel="apple-touch-icon" href="{{ base_url }}/{{ config.extra.logo }}">
     {% endif %}
-    {% set favicon = favicon | default("assets/images/favicon-e565ddfa3b.ico") %}
+    {% set favicon = favicon | default("assets/images/favicon.ico") %}
     <link rel="shortcut icon" type="image/x-icon" href="{{ base_url }}/{{ favicon }}">
     <link rel="icon" type="image/x-icon" href="{{ base_url }}/{{ favicon }}">
     <style>
@@ -53,9 +54,9 @@
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-54f87043f3.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.css">
     {% if config.extra.palette %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/palettes-05ab2406df.css">
+      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/palettes.css">
     {% endif %}
     {% if config.extra.font != "none" %}
       {% set text = config.extra.get("font", {}).text | default("Ubuntu") %}
@@ -74,7 +75,7 @@
     {% for path in extra_css %}
       <link rel="stylesheet" href="{{ path }}">
     {% endfor %}
-    <script src="{{ base_url }}/assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    <script src="{{ base_url }}/assets/javascripts/modernizr.js"></script>
     {% block extrahead %}{% endblock %}
   </head>
   {% set palette = config.extra.get("palette", {}) %}
@@ -107,17 +108,65 @@
             <h1>{{ page_title | default(site_name, true)}}</h1>
           {% endif %}
           {{ content }}
+              {% if 'status' in meta %}
+                {% if meta['status'][0] == 'Development' %}
+                 <div class="arcadia-development">
+		 <table class="arcadia-development" i>
+                  <tr>
+                    <td>
+                  <i class="fa fa-exclamation-circle"></i>
+                    </td>
+                    <td>
+                      Development: This is page is currently in development and subject to change based on feedback.
+                    </td>
+                    </tr>
+                  </table>
+                  </div>
+                {% elif meta['status'][0] == 'Engineering-Feature-Dev' %}
+                 <div class="arcadia-development">
+                 <table style="width:100%">
+                  <tr>
+                    <td>
+                  <i class="fa fa-exclamation-circle"></i>
+                    </td>
+                    <td>
+                      Feature-Dev: The Features on this page are currently under development and may not be availble until Version {{ meta['aaversion'][0]}} 
+                    </td>
+                    </tr>
+                  </table>
+                  </div>
+                 {% elif meta['status'][0] == 'Client-Ready' %}
+                 <div class="arcadia-development">
+                 <table>
+                  <tr>
+                    <td>
+                  <i class="fa fa-comments-o"></i>
+                    </td>
+                    <td>
+                      Client-Ready: This page is client ready as of Version {{ meta['aaversion'][0]}} 
+                    </td>
+                    </tr>
+                  </table>
+                  </div>
+                {% elif meta['status'][0] == 'Internal-Only' %}
+                 <div class="arcadia-development">
+                 <table>
+                  <tr>
+                    <td>
+                  <i class="fa fa-lock"></i>
+                    </td>
+                    <td>
+                      Internal-Only: This page should be used internal to Arcadia only.  
+                    </td>
+                    </tr>
+                  </table> 
+                  </div>
+                {% endif %}
+		{% endif %}
           <aside class="copyright" role="note">
-            {% if copyright %}
-              {{ copyright }} &ndash;
-            {% endif %}
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
+	    {% if 'createdate' in meta %}
+	    	<p> Page Created on {{ meta['createdate'][0] }} and modified on {{ meta['modifydate'][0] }} by {{ meta['author'][0] }}</p>
+		{% endif %}
           </aside>
           {% block footer %}
             <footer class="footer">
@@ -139,7 +188,7 @@
       var base_url = '{{ base_url }}';
       var repo_id  = '{{ repo_id }}';
     </script>
-    <script src="{{ base_url }}/assets/javascripts/application-997097ee0c.js"></script>
+    <script src="{{ base_url }}/assets/javascripts/application.js"></script>
     {% for path in extra_javascript %}
       <script src="{{ path }}"></script>
     {% endfor %}

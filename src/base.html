@@ -10,6 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,
       user-scalable=no, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- General meta tags -->
     {% block htmltitle %}
@@ -183,23 +184,71 @@
           {% if not h1 %}
             <h1>{{ page_title | default(site_name, true)}}</h1>
           {% endif %}
-
           <!-- Article content -->
           {{ content }}
 
+	 <!-- CUSTOM ARCADIA METADATA HANDLING -->
+              {% if 'status' in meta %}
+                {% if meta['status'][0] == 'Development' %}
+                 <div class="arcadia-development" >
+		 <table class="arcadia-development"i>
+                  <tr>
+                    <td>
+                  <i class="fa fa-exclamation-circle"></i>
+                    </td>
+                    <td>
+                      Development: This is page is currently in development and subject to change based on feedback.
+                    </td>
+                    </tr>
+                  </table>
+                  </div>
+                {% elif meta['status'][0] == 'Engineering-Feature-Dev' %}
+                 <div class="arcadia-development" >
+                 <table style="width:100%">
+                  <tr>
+                    <td>
+                  <i class="fa fa-exclamation-circle"></i>
+                    </td>
+                    <td>
+                      Feature-Dev: The Features on this page are currently under development and may not be availble until Version {{ meta['aaversion'][0]}} 
+                    </td>
+                    </tr>
+                  </table>
+                  </div>
+                 {% elif meta['status'][0] == 'Client-Ready' %}
+                 <div class="arcadia-development" >
+                 <table >
+                  <tr>
+                    <td>
+                  <i class="fa fa-comments-o"></i>
+                    </td>
+                    <td>
+                      Client-Ready: This page is client ready as of Version {{ meta['aaversion'][0]}} 
+                    </td>
+                    </tr>
+                  </table>
+                  </div>
+                {% elif meta['status'][0] == 'Internal-Only' %}
+                 <div class="arcadia-development" >
+                 <table >
+                  <tr>
+                    <td>
+                  <i class="fa fa-lock"></i>
+                    </td>
+                    <td>
+                      Internal-Only: This page should be used internal to Arcadia only.  
+                    </td>
+                    </tr>
+                  </table> 
+                  </div>
+                {% endif %}
+		{% endif %}
           <!-- Copyright and theme information -->
           <aside class="copyright" role="note">
-            {% if copyright %}
-              {{ copyright }} &ndash;
-            {% endif %}
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/"
-              target="_blank">
-              Material
-            </a>
-            theme.
+          
+	    {% if 'createdate' in meta %}
+	    	<p> Page Created on {{ meta['createdate'][0] }} and modified on {{ meta['modifydate'][0] }} by {{ meta['author'][0] }}</p>
+		{% endif %}
           </aside>
 
           <!-- Footer -->

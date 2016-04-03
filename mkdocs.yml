@@ -33,14 +33,13 @@ copyright: Copyright (c) 2016 Martin Donath
 
 # Documentation and theme
 theme_dir: material
+extra_css: ['stylesheets/custom1.css']
 
 # Options
 extra:
   version: 0.2.2
-  logo: images/logo.png
-  author:
-    github: squidfunk
-    twitter: squidfunk
+  logo: images/Mountain_400.png
+
 
 # Extensions
 markdown_extensions:
@@ -54,4 +53,4 @@ pages:
   - Material: index.md
   - Getting started: getting-started.md
   - Customization: customization.md
-  - License: license.md
+  - License: ~license.md
