@@ -35,7 +35,7 @@
     {% if config.extra.logo %}
       <link rel="apple-touch-icon" href="{{ base_url }}/{{ config.extra.logo }}">
     {% endif %}
-    {% set favicon = favicon | default("assets/images/favicon.ico") %}
+    {% set favicon = favicon | default("assets/images/favicon-e565ddfa3b.ico") %}
     <link rel="shortcut icon" type="image/x-icon" href="{{ base_url }}/{{ favicon }}">
     <link rel="icon" type="image/x-icon" href="{{ base_url }}/{{ favicon }}">
     <style>
@@ -54,9 +54,9 @@
       	font-style: normal;
       }
     </style>
-    <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application.css">
+    <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/application-15f3a72a49.css">
     {% if config.extra.palette %}
-      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/palettes.css">
+      <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/palettes-2d6c5d2926.css">
     {% endif %}
     {% if config.extra.font != "none" %}
       {% set text = config.extra.get("font", {}).text | default("Ubuntu") %}
@@ -75,7 +75,8 @@
     {% for path in extra_css %}
       <link rel="stylesheet" href="{{ path }}">
     {% endfor %}
-    <script src="{{ base_url }}/assets/javascripts/modernizr.js"></script>
+    <script src="{{ base_url }}/assets/javascripts/modernizr-4a5cc7e01e.js"></script>
+    <script src="{{ base_url }}/assets/javascripts/collapse.js"></script>
     {% block extrahead %}{% endblock %}
   </head>
   {% set palette = config.extra.get("palette", {}) %}
@@ -188,7 +189,7 @@
       var base_url = '{{ base_url }}';
       var repo_id  = '{{ repo_id }}';
     </script>
-    <script src="{{ base_url }}/assets/javascripts/application.js"></script>
+    <script src="{{ base_url }}/assets/javascripts/application-dfb6964a49.js"></script>
     {% for path in extra_javascript %}
       <script src="{{ path }}"></script>
     {% endfor %}

@@ -25,6 +25,8 @@
 bower_components
 node_modules
 
+material
+material/
 # Build files
 build
 MANIFEST

@@ -49,8 +49,8 @@ markdown_extensions:
       permalink: '#'
 
 # Page tree
-pages:
-  - Material: index.md
-  - Getting started: getting-started.md
-  - Customization: customization.md
-  - License: ~license.md
+
+
+
+
+
