@@ -122,7 +122,8 @@ gulp.task('assets:javascripts', function() {
 
     /* Application javascripts */
     'src/assets/javascripts/application.js',
-    'src/assets/javascripts/standalone.js'
+    'src/assets/javascripts/standalone.js',
+    'src/assets/javascripts/collapse.js'
   ]).pipe(gulpif(args.sourcemaps, sourcemaps.init()))
     .pipe(concat('application.js'))
     .pipe(gulpif(args.sourcemaps, sourcemaps.write()))
