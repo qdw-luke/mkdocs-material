@@ -1150,6 +1150,9 @@ pre, code, kbd {
 .sublist {
   padding-top: 10px; }
 
+.minpage {
+  font-weight: 400; }
+
 .show {
   display: block; }
 
@@ -1163,6 +1166,9 @@ pre, code, kbd {
 .hide:target ~ ul {
     display:inline; 
 } */
+.collapse {
+  cursor: pointer; }
+
 li {
   padding-bottom: 10px; }
 
