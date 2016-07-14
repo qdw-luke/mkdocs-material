@@ -190,7 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
         /* Create index */
         var index = lunr(function() {
           this.field('title', { boost: 10 });
-          this.field('text');
           this.ref('location');
         });
 
