@@ -24,6 +24,8 @@
 # Bower and NPM libraries
 bower_components
 node_modules
+venv/
+material/
 
 # Build files
 build
