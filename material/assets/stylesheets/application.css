@@ -502,22 +502,32 @@ a {
  * Overlay
  */
 .overlay {
-  -webkit-transition: opacity .25s, width   .0s .25s, height  .0s .25s;
-  transition: opacity .25s, width   .0s .25s, height  .0s .25s;
+  -webkit-transition: opacity .25s,
+ width   .0s .25s,
+ height  .0s .25s;
+  transition: opacity .25s,
+ width   .0s .25s,
+ height  .0s .25s;
   /*
    * Expanded drawer
    */ }
   #toggle-drawer:checked ~ .overlay,
   .toggle-drawer .overlay {
-    -webkit-transition: opacity .25s, width   .0s, height  .0s;
-    transition: opacity .25s, width   .0s, height  .0s; }
+    -webkit-transition: opacity .25s,
+ width   .0s,
+ height  .0s;
+    transition: opacity .25s,
+ width   .0s,
+ height  .0s; }
 
 /*
  * Application header - check for javascript to omit flashing
  */
 .js .header {
-  -webkit-transition: background .6s, color      .6s;
-  transition: background .6s, color      .6s;
+  -webkit-transition: background .6s,
+ color      .6s;
+  transition: background .6s,
+ color      .6s;
   /*
    * Status bar
    */ }
@@ -725,6 +735,14 @@ hr {
   .scrollable .wrapper {
     height: 100%;
     /* Hack [iOS]: Force overflow scrolling */ }
+
+/*//CHANGE*/
+/*
+
+.collapse
+*/
+
+
     .ios .scrollable .wrapper {
       margin-bottom: 2px; }
 
@@ -1041,8 +1059,10 @@ pre, code, kbd {
  * Repository buttons
  */
 .repo a {
-  -webkit-transition: box-shadow .4s, opacity    .4s;
-  transition: box-shadow .4s, opacity    .4s; }
+  -webkit-transition: box-shadow .4s,
+ opacity    .4s;
+  transition: box-shadow .4s,
+ opacity    .4s; }
 
 /*
  * Copyright (c) 2016 Martin Donath <martin.donath@squidfunk.com>
@@ -1093,8 +1113,10 @@ pre, code, kbd {
       color: #1565C0; }
     .drawer .toc a:hover, .drawer .toc a:focus {
       color: #1565C0; }
+/*
   .drawer .anchor a {
     border-left: 2px solid #1565C0; }
+*/
   .drawer .section {
     color: rgba(0, 0, 0, 0.54); }
 
@@ -1165,8 +1187,35 @@ pre, code, kbd {
 .hide:target ~ ul {
     display:inline; 
 } */
+
+/*CHANGE*/
+/*
 .collapse {
   cursor: pointer; }
+*/
+
+.drawer {
+    li {
+        cursor: pointer;
+    }
+}
+
+/*
+
+.nav-list-item:hover {
+    cursor: pointer;
+}
+*/
+
+.collapse.sechead span:hover {
+    cursor: pointer;
+}
+
+/*//CHANGE*/
+.collapse.sechead  {
+    padding-top: 14px;
+/*    cursor: pointer;*/
+}
 
 li {
   padding-bottom: 10px; }
@@ -1273,7 +1322,7 @@ li {
    * Scrollable container
    */ }
   .ios .drawer {
-    overflow: scroll;
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch; }
   .drawer .toc li a {
     padding: 14.5px 24px;
@@ -1358,7 +1407,8 @@ li {
       width: 64px;
       height: 64px; }
   .project .name {
-    display: table-cell;
+/*    display: table-cell;*/
+      display: none;
     padding-left: 4px;
     font-size: 14px;
     line-height: 1.25em;
@@ -1730,7 +1780,7 @@ pre span {
  * Article
  */
 .article {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7em;
   /* [tablet landscape+]: Indent to account for drawer */
   /*
@@ -2198,8 +2248,12 @@ pre span {
  * Search results
  */
 .results {
-  -webkit-transition: opacity .3s .1s, width   .0s .4s, height  .0s .4s;
-  transition: opacity .3s .1s, width   .0s .4s, height  .0s .4s;
+  -webkit-transition: opacity .3s .1s,
+ width   .0s .4s,
+ height  .0s .4s;
+  transition: opacity .3s .1s,
+ width   .0s .4s,
+ height  .0s .4s;
   /*
    * Active search mode
    */
@@ -2208,8 +2262,12 @@ pre span {
    */ }
   #toggle-search:checked ~ .main .results,
   .toggle-search .results {
-    -webkit-transition: opacity .4s, width   .0s, height  .0s;
-    transition: opacity .4s, width   .0s, height  .0s; }
+    -webkit-transition: opacity .4s,
+ width   .0s,
+ height  .0s;
+    transition: opacity .4s,
+ width   .0s,
+ height  .0s; }
   .results .list a {
     -webkit-transition: background .25s;
     transition: background .25s; }
@@ -2635,6 +2693,10 @@ pre span {
     -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      
+/*      CHANGE*/
+    overflow-x: hidden;  
+      
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);/*
      * Just hide drawer, if browser doesn't support 3D transforms
      */ }

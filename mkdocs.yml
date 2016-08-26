@@ -36,9 +36,9 @@ theme_dir: material
 extra:
   version: 4.11
   logo: images/Mountain_64.png
-  author:
-    github: arcadia
-    twitter: ArcadiaHealthIT
+  # author:
+  #   github: arcadia
+  #   twitter: ArcadiaHealthIT
 
 # Extensions
 markdown_extensions:
