@@ -13665,21 +13665,52 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//minpage -> currentMinpage
+//collapse --> current secHead
+
+//all of currents children should be display block
+//all currentMinPage children display block
 
 /* ----------------------------------------------------------------------------
  * Collapse logic
  * ------------------------------------------------------------------------- */
 
- (function($){
-  toggles = $('li.collapse');
-  toggles.click(function(event){
-    if (toggles.is(event.target)) {
-      $(event.target).children().toggle();
-      event.stopPropagation();
-    }
-  });
-  toggles.children().hide();
-})(jQuery);
+var openPane = function(){
+    var spanParent = $(this).parent();
+    $(spanParent.find('.expand-icon')[0]).html(' -');
+    spanParent.children('ul').show();    
+
+    $(this).one('click', closePane);    
+    ///add a hover class only while closed
+};
+var closePane = function(){ 
+
+    var spanParent = $(this).parent();
+    $(spanParent.find('.expand-icon')[0]).html(' +');
+    spanParent.children('ul').hide();  
+    
+    $(this).one('click', openPane);
+};
+
+//set children to display none in JS
+$('.expandable-nav').one('click', openPane);
+
+
+
+
+// (function($){
+//  toggles = $('li.collapse');
+//  toggles.click(function(event){
+//    if (toggles.is(event.target)) {
+//      $(event.target).children().toggle();
+//      event.stopPropagation();
+//    }
+//  });
+//  toggles.children().hide();
+//})(jQuery);
+
+
+
 /*
  * Copyright (c) 2016 Martin Donath <martin.donath@squidfunk.com>
  *

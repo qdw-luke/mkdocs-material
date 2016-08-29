@@ -2,7 +2,9 @@
 {% if nav_item.children %}
 
   <li class="{% if nav_item.active %}current {% else %} collapse {% endif %}  {% if not sub_item %} sechead {% else %} section {% endif %}">
-  + {{ nav_item.title }} 
+      
+      <div class="expandable-nav">
+  <span class="nav-title">{{ nav_item.title }}</span> <span class="expand-icon plus"> +</span></div>
    
      
 
