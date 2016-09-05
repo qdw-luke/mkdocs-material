@@ -31,6 +31,7 @@
         {% endif %}
       </div>
     </div>
+        
   </a>
 
   <!-- Repository and table of contents -->
@@ -70,6 +71,7 @@
       <div class="toc">
         <ul>
         {% for nav_item in nav %}
+
             {% set cnt_item = loop.index|string %}
             {% include "nav.html" %}
             

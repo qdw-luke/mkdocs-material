@@ -13224,7 +13224,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * ------------------------------------------------------------------------- */
 
   /* Automatically close drawer when anchors are clicked */
-  Array.prototype.forEach.call(anchors, function(item) {
+  Array.prototype.forEach.call(anchors, function(item) {   
     item.querySelector('a').addEventListener('click', function() {
       document.getElementById('toggle-drawer').checked = false;
       document.body.classList.remove('toggle-drawer');
@@ -13340,6 +13340,8 @@ document.addEventListener('DOMContentLoaded', function() {
         /* Register keyhandler to execute search on key up */
         query.addEventListener('keyup', function() {
           var container = document.querySelector('.results .list');
+          //first time
+            $('.results').css('display', 'block');
           while (container.firstChild)
             container.removeChild(container.firstChild);
 
@@ -13670,16 +13672,38 @@ document.addEventListener('DOMContentLoaded', function() {
  * Collapse logic
  * ------------------------------------------------------------------------- */
 
- (function($){
-  toggles = $('li.collapse');
-  toggles.click(function(event){
-    if (toggles.is(event.target)) {
-      $(event.target).children().toggle();
-      event.stopPropagation();
-    }
-  });
-  toggles.children().hide();
-})(jQuery);
+var openPane = function(){
+    var spanParent = $(this).parent();
+    $(spanParent.find('.expand-icon')[0]).html(' -');
+    spanParent.children('ul').show();    
+
+    $(this).one('click', closePane);    
+    ///add a hover class only while closed
+};
+var closePane = function(){ 
+
+    var spanParent = $(this).parent();
+    $(spanParent.find('.expand-icon')[0]).html(' +');
+    spanParent.children('ul').hide();  
+    $(this).one('click', openPane);
+};
+//first click goes to openPane function, second to closePane
+$('.expandable-nav').one('click', openPane);
+//here we simulate a click event on new page load, for any currently selected page
+//this way, browser will 'remember' that section has been expanded, and should open closePane on first click
+$($('.current.sechead').find('.expandable-nav')[0]).trigger('click');
+
+var switchToXBtn = function(event){
+    $(this).find('.toggle-button').removeClass('icon-menu').addClass('icon-close');
+    $('.button.button-menu').one('click', switchToMenuBtn);       
+};
+var switchToMenuBtn = function(){
+      $(this).find('.toggle-button').removeClass('icon-close').addClass('icon-menu'); 
+    $('.button.button-menu').one('click', switchToXBtn);       
+};
+
+$('.button.button-menu').one('click', switchToXBtn);
+
 /*
  * Copyright (c) 2016 Martin Donath <martin.donath@squidfunk.com>
  *
