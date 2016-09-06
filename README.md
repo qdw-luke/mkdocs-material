@@ -8,6 +8,7 @@ A material design theme for [MkDocs](http://www.mkdocs.org).
 [![iOS](docs/images/screen.png)](http://squidfunk.github.io/mkdocs-material/)
 
 ## Quick start
+test
 
 Install with `pip`:
 
