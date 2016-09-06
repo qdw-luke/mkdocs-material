@@ -31,7 +31,7 @@
 
   /* [tablet landscape-]: Hide menu */
   @include break-to-device(tablet landscape) {
-    transform: translate3d(-262px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
     transition: transform .25s cubic-bezier(.4, 0, .2, 1);
 
     /*

@@ -47,3 +47,415 @@
 
 @import "print";
 @import "shame";
+
+$max-width: 1050px;
+$drawer-width: 300px;
+
+.minpage {
+    color: gray;
+}
+
+.project {
+    display: none;
+}
+
+.article {
+    max-width: $max-width - $drawer-width;
+
+    padding-left: 13px;
+    padding-right: 13px;
+      font-size: 16px;
+  line-height: 1.5em;
+}
+
+@media only screen and (min-width: 960px){
+    .article {
+        margin-left: $drawer-width;  
+    }
+    
+}
+
+.button .toggle-button.icon.icon-back {
+  padding: 14.5px;  
+}
+.bar.search .button .toggle-button.icon.icon-close {
+  padding: 14.5px;  
+  padding-top: 15.5px;
+}
+
+
+@media only screen and (max-width: 959px){
+    .drawer {
+        top: 40px;
+    }
+    
+    .drawer .wrapper {
+        position: relative;
+        float: right;
+    }
+}
+@media only screen and (min-width: 720px) {
+//  .header {
+//    height: 40px;
+//    padding: 0px;     
+    .header {
+        height: 40px;
+        padding: 0px;     
+    }
+}
+
+.header {
+    height: 40px;
+    padding: 0px;     
+}
+
+.drawer .current .currentminpage .ullist{
+       padding: 0;
+    font-size: 14px; 
+    margin-bottom: 0;
+}
+
+.current.sechead ul {
+    display: block;
+}
+.collapse.sechead ul {
+    display: none;
+}
+
+.collapse.section ul {
+    display: none;
+}
+.current.section ul {
+    display: block;
+}
+
+.scrollable {
+     overflow-x: hidden;
+}
+
+.backdrop-paper {
+  max-width: $max-width;
+  height: 100%;
+  margin-left: auto;
+  margin-right:  auto;
+  /*
+   * Actual paper
+   */ }
+  .backdrop-paper:after {
+    content: " ";
+    display: block;
+    height: 100%;
+    margin-left: $drawer-width;
+
+}
+
+
+.bar {
+  display: table;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  /*
+   * Links should span icons entirely
+   */
+  /*
+   * Hide search button, in case javascript is not available.
+   */
+  /*
+   * Navigation path
+   */ }
+
+.main {
+    max-width: $max-width;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.drawer {
+    padding-left: 15px;
+    padding-right: 15px;    
+}
+
+.project {
+    display: none;
+}
+
+.expandable-nav:hover {
+    letter-spacing: 1px;
+    color: #1565C0;
+}
+.expandable-nav:hover .expand-icon {
+    color: red;
+}
+
+
+.expand-icon {
+    font-size: 18px;
+    opacity: .55;
+}
+
+.sechead {
+    padding-bottom: 5px;
+    letter-spacing: .5px;
+}
+
+
+
+.drawer {
+    li {
+        cursor: pointer;
+    }
+}
+
+/*
+
+.nav-list-item:hover {
+    cursor: pointer;
+}
+*/
+
+.sechead span:hover {
+    cursor: pointer;
+}
+
+/*//CHANGE*/
+.sechead  {
+    padding-top: 14px;
+/*    cursor: pointer;*/
+}
+
+.drawer {
+    width: 300px;
+}
+
+// .drawer .toc li a {
+//    padding: 14.5px 24px;
+//    white-space: nowrap;
+///*    overflow: hidden;*/
+//    text-overflow: ellipsis; }
+
+  .drawer .section {
+    display: block;
+      padding-top: 0;
+      padding-bottom: 10px;
+      padding-left: 24px;
+}
+
+.project {
+    display: none;
+}
+
+
+  .project .logo {
+    display: table-cell;
+    width: 50px;
+    padding-right: 12px;
+    /*
+     * Project logo image
+     */ }
+
+ .project .name {
+/*    display: table-cell;*/
+      display: none;
+    padding-left: 4px;
+    font-size: 14px;
+    line-height: 1.25em;
+    vertical-align: middle;
+    /* [tablet portait+]: Slightly larger project name */ }
+
+
+
+
+@media only screen and (min-width: 100px){
+    
+    .bar.search .query {
+        padding-top: 16px;
+        margin: 0;
+//        padding: 0;
+    }
+    
+    .results .scrollable {
+        top: 0;
+    }
+    
+    .results {
+        top: 40px;
+    }
+    
+    .header .stretch .title {
+        /* font-size: 20px; */
+        font-size: 16px;
+        padding: 10px 0;
+    }       
+}
+    
+ 
+//}
+
+  .header .stretch .title {
+    font-size: 18px;
+//    padding: 12px 0; 
+//      position: absolute;
+//      top: 50%;
+//      transform: translateY(-50%);
+}
+
+.results {
+    display: none;
+}
+    
+/*    padding-left: 262px;*/
+/*
+/*
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+*/
+
+.drawer .anchor a {
+    border-left: none;
+}
+
+.drawer .scrollable .wrapper {
+    max-height: 100%;
+}
+.drawer .wrapper {
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 255px;
+}
+
+.drawer .scrollable {
+    top: 0;
+}
+
+.home-link {
+    padding-left: 0px;
+}
+
+.drawer .toc li a {
+    
+}
+
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;    
+  text-rendering: auto;
+    font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.fa-home:before {
+  content: "\f015";
+}
+
+//.title {
+//    opacity: .7;
+//}
+
+.home-button {
+    font-size: 22px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4%;
+    transition: opacity .1s ease-in-out;
+    padding-left: 15px;
+    opacity: .7;
+}
+.home-button:hover {
+    color: blue;
+    opacity: 1;
+}
+
+//.stretch {
+////    width: 96%;
+//    float: right;
+//}
+
+.ullist {
+    padding-top: 12px;
+}
+ul {
+    padding-top: 12px;
+}
+
+.anchor {
+    font-size: 13px;
+}
+
+.drawer .current .currentminpage .ullist {
+    padding-top: 12px;
+}
+
+
+.header {
+    width: 100%;
+    z-index: 10;
+}
+
+.sechead-home {
+    color: gray;
+}
+.sechead-home:hover {
+    color: red;
+}
+
+
+
+.footer {
+    display: none;
+}
+
+.article {
+    padding-bottom: 20px;
+}
+
+//.button.button-close {
+//    vertical-align: inherit;
+//}
+//.button .icon.icon-search {
+//    margin: 0px;
+//    padding: 0px;
+//    position: absolute;
+//    transform: translateY(-50%);
+//    font-size: 20px;
+//    right: 0;
+//    top: 50%;
+//}
+
+.button .icon {
+    margin: 0;
+    padding: 9.2px;
+    font-size: 20px;
+}
+button .icon.toggle-button {
+    padding: 15px;
+}
+.button .icon.icon-search {
+    padding: 10px;
+}
+
+
+.article h1 {
+    padding-bottom: 20px;
+}
+
+//.button .icon.button-reset {
+//    margin: 0px;
+//    padding: 8px;
+//    font-size: 20px;
+//}
+
+.sechead  {
+    padding-top: 14px;
+/*    cursor: pointer;*/
+}
+

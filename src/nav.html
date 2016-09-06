@@ -1,11 +1,10 @@
 <!-- Render sections -->
 {% if nav_item.children %}
-
+    
   <li class="{% if nav_item.active %}current {% else %} collapse {% endif %}  {% if not sub_item %} sechead {% else %} section {% endif %}">
-  + {{ nav_item.title }} 
+      <div class="expandable-nav">
+  <span class="nav-title">{{ nav_item.title }}</span> <span class="expand-icon plus"> +</span></div>
    
-     
-
     <ul class="{% if not nav_item.active and not sub_item %}list {% elif not nav_item.active and sub_item %}sublist{% else %}ullist{% endif %}">
 
       <!-- Render pages of section -->
@@ -20,39 +19,54 @@
 
 <!-- Render page link -->
 {% else %}
-  <li class="{% if nav_item.active %}current{% endif %}minpage">
-    <a class="{% if nav_item.active %}current{% endif %}"
-      title="{{ nav_item.title }}" href="{{ nav_item.url }}" >
-      {{ nav_item.title }}
-    </a>
+<!--    {{nav_item}}-->
+<!--
+    {% if (nav_item.title == "Home")  %}
+        <li class="sechead sechead-home" href="/">Home
+        </li>
 
-    <!-- Expand active pages -->
-    {% if nav_item == current_page %}
+    {% else %}
+-->
+    {% if (nav_item.title == "Home")   %}
+        <a class="home-link" href="/" >
+              <li class="sechead sechead-home">Home</li> 
+        </a>
+    {% else %}  
+      <li class="{% if nav_item.active %} current{% endif %}minpage">
+        <a class="{% if nav_item.active %}current{% endif %}"
+          title="{{ nav_item.title }}" href="{{ nav_item.url }}" >
+          {{ nav_item.title }}
+        </a>
 
-      <!--
-        The top-level anchor must be skipped if the article contains a h1
-        headline, since it would be redundant to the link to the current page
-        that is located just above the anchor. Therefore we directly continue
-        with the children of the anchor.
-      -->
-      {% if h1 %}
-        {% set toc = (toc | first).children %}
-      {% endif %}
+        <!-- Expand active pages -->
+        {% if nav_item == current_page %}
 
-      <!-- Render anchors of active page -->
-      {% if toc and (toc | first) %}
-        <ul class="ullist">
-          {% for toc_item in toc %}
+          <!--
+            The top-level anchor must be skipped if the article contains a h1
+            headline, since it would be redundant to the link to the current page
+            that is located just above the anchor. Therefore we directly continue
+            with the children of the anchor.
+          -->
+          {% if h1 %}
+            {% set toc = (toc | first).children %}
+          {% endif %}
 
-            <!-- Render anchor -->
-            <li class="anchor">
-              <a title="{{ toc_item.title }}" href="{{ toc_item.url }}">
-                {{ toc_item.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
+          <!-- Render anchors of active page -->
+          {% if toc and (toc | first) %}
+            <ul class="ullist">
+              {% for toc_item in toc %}
+
+                <!-- Render anchor -->
+                <li class="anchor">
+                  <a title="{{ toc_item.title }}" href="{{ toc_item.url }}">
+                    {{ toc_item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endif %}
+      </li>
     {% endif %}
-  </li>
+
 {% endif %}
