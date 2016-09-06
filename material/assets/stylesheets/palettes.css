@@ -164,8 +164,6 @@
         color: #e84e40; }
       .palette-primary-red .drawer .toc a:hover, .palette-primary-red .drawer .toc a:focus {
         color: #e84e40; }
-    .palette-primary-red .drawer .anchor a {
-      border-left: 2px solid #e84e40; }
   .palette-primary-red .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-red .article {
@@ -236,8 +234,6 @@
         color: #e91e63; }
       .palette-primary-pink .drawer .toc a:hover, .palette-primary-pink .drawer .toc a:focus {
         color: #e91e63; }
-    .palette-primary-pink .drawer .anchor a {
-      border-left: 2px solid #e91e63; }
   .palette-primary-pink .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-pink .article {
@@ -308,8 +304,6 @@
         color: #ab47bc; }
       .palette-primary-purple .drawer .toc a:hover, .palette-primary-purple .drawer .toc a:focus {
         color: #ab47bc; }
-    .palette-primary-purple .drawer .anchor a {
-      border-left: 2px solid #ab47bc; }
   .palette-primary-purple .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-purple .article {
@@ -380,8 +374,6 @@
         color: #7e57c2; }
       .palette-primary-deep-purple .drawer .toc a:hover, .palette-primary-deep-purple .drawer .toc a:focus {
         color: #7e57c2; }
-    .palette-primary-deep-purple .drawer .anchor a {
-      border-left: 2px solid #7e57c2; }
   .palette-primary-deep-purple .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-deep-purple .article {
@@ -452,8 +444,6 @@
         color: #3f51b5; }
       .palette-primary-indigo .drawer .toc a:hover, .palette-primary-indigo .drawer .toc a:focus {
         color: #3f51b5; }
-    .palette-primary-indigo .drawer .anchor a {
-      border-left: 2px solid #3f51b5; }
   .palette-primary-indigo .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-indigo .article {
@@ -524,8 +514,6 @@
         color: #2196F3; }
       .palette-primary-blue .drawer .toc a:hover, .palette-primary-blue .drawer .toc a:focus {
         color: #2196F3; }
-    .palette-primary-blue .drawer .anchor a {
-      border-left: 2px solid #2196F3; }
   .palette-primary-blue .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-blue .article {
@@ -596,8 +584,6 @@
         color: #03a9f4; }
       .palette-primary-light-blue .drawer .toc a:hover, .palette-primary-light-blue .drawer .toc a:focus {
         color: #03a9f4; }
-    .palette-primary-light-blue .drawer .anchor a {
-      border-left: 2px solid #03a9f4; }
   .palette-primary-light-blue .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-light-blue .article {
@@ -668,8 +654,6 @@
         color: #00bcd4; }
       .palette-primary-cyan .drawer .toc a:hover, .palette-primary-cyan .drawer .toc a:focus {
         color: #00bcd4; }
-    .palette-primary-cyan .drawer .anchor a {
-      border-left: 2px solid #00bcd4; }
   .palette-primary-cyan .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-cyan .article {
@@ -740,8 +724,6 @@
         color: #009688; }
       .palette-primary-teal .drawer .toc a:hover, .palette-primary-teal .drawer .toc a:focus {
         color: #009688; }
-    .palette-primary-teal .drawer .anchor a {
-      border-left: 2px solid #009688; }
   .palette-primary-teal .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-teal .article {
@@ -812,8 +794,6 @@
         color: #259b24; }
       .palette-primary-green .drawer .toc a:hover, .palette-primary-green .drawer .toc a:focus {
         color: #259b24; }
-    .palette-primary-green .drawer .anchor a {
-      border-left: 2px solid #259b24; }
   .palette-primary-green .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-green .article {
@@ -884,8 +864,6 @@
         color: #7cb342; }
       .palette-primary-light-green .drawer .toc a:hover, .palette-primary-light-green .drawer .toc a:focus {
         color: #7cb342; }
-    .palette-primary-light-green .drawer .anchor a {
-      border-left: 2px solid #7cb342; }
   .palette-primary-light-green .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-light-green .article {
@@ -956,8 +934,6 @@
         color: #c0ca33; }
       .palette-primary-lime .drawer .toc a:hover, .palette-primary-lime .drawer .toc a:focus {
         color: #c0ca33; }
-    .palette-primary-lime .drawer .anchor a {
-      border-left: 2px solid #c0ca33; }
   .palette-primary-lime .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-lime .article {
@@ -1028,8 +1004,6 @@
         color: #f9a825; }
       .palette-primary-yellow .drawer .toc a:hover, .palette-primary-yellow .drawer .toc a:focus {
         color: #f9a825; }
-    .palette-primary-yellow .drawer .anchor a {
-      border-left: 2px solid #f9a825; }
   .palette-primary-yellow .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-yellow .article {
@@ -1100,8 +1074,6 @@
         color: #ffb300; }
       .palette-primary-amber .drawer .toc a:hover, .palette-primary-amber .drawer .toc a:focus {
         color: #ffb300; }
-    .palette-primary-amber .drawer .anchor a {
-      border-left: 2px solid #ffb300; }
   .palette-primary-amber .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-amber .article {
@@ -1172,8 +1144,6 @@
         color: #fb8c00; }
       .palette-primary-orange .drawer .toc a:hover, .palette-primary-orange .drawer .toc a:focus {
         color: #fb8c00; }
-    .palette-primary-orange .drawer .anchor a {
-      border-left: 2px solid #fb8c00; }
   .palette-primary-orange .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-orange .article {
@@ -1244,8 +1214,6 @@
         color: #ff7043; }
       .palette-primary-deep-orange .drawer .toc a:hover, .palette-primary-deep-orange .drawer .toc a:focus {
         color: #ff7043; }
-    .palette-primary-deep-orange .drawer .anchor a {
-      border-left: 2px solid #ff7043; }
   .palette-primary-deep-orange .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-deep-orange .article {
@@ -1316,8 +1284,6 @@
         color: #795548; }
       .palette-primary-brown .drawer .toc a:hover, .palette-primary-brown .drawer .toc a:focus {
         color: #795548; }
-    .palette-primary-brown .drawer .anchor a {
-      border-left: 2px solid #795548; }
   .palette-primary-brown .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-brown .article {
@@ -1388,8 +1354,6 @@
         color: #757575; }
       .palette-primary-grey .drawer .toc a:hover, .palette-primary-grey .drawer .toc a:focus {
         color: #757575; }
-    .palette-primary-grey .drawer .anchor a {
-      border-left: 2px solid #757575; }
   .palette-primary-grey .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-grey .article {
@@ -1460,8 +1424,6 @@
         color: #546e7a; }
       .palette-primary-blue-grey .drawer .toc a:hover, .palette-primary-blue-grey .drawer .toc a:focus {
         color: #546e7a; }
-    .palette-primary-blue-grey .drawer .anchor a {
-      border-left: 2px solid #546e7a; }
   .palette-primary-blue-grey .project {
     /* [tablet landscape-]: Set background color */ }
   .palette-primary-blue-grey .article {

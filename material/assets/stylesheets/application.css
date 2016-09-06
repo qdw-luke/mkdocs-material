@@ -2846,6 +2846,10 @@ button .icon.toggle-button {
 .article h1 {
   padding-bottom: 20px; }
 
+.sechead {
+  padding-top: 14px;
+  /*    cursor: pointer;*/ }
+
 @media only screen and (min-width: 960px) {
   .backdrop {
     background: #f2f2f2; }

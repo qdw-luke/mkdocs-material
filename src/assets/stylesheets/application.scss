@@ -48,7 +48,6 @@
 @import "print";
 @import "shame";
 
-
 $max-width: 1050px;
 $drawer-width: 300px;
 
@@ -454,3 +453,9 @@ button .icon.toggle-button {
 //    padding: 8px;
 //    font-size: 20px;
 //}
+
+.sechead  {
+    padding-top: 14px;
+/*    cursor: pointer;*/
+}
+
