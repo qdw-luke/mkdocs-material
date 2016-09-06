@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     item.querySelector('a').addEventListener('click', function() {
       document.getElementById('toggle-drawer').checked = false;
       document.body.classList.remove('toggle-drawer');
+     $('.button.button-menu').trigger('click');      
     });
   });
 
@@ -557,13 +558,35 @@ $('.expandable-nav').one('click', openPane);
 //this way, browser will 'remember' that section has been expanded, and should open closePane on first click
 $($('.current.sechead').find('.expandable-nav')[0]).trigger('click');
 
-var switchToXBtn = function(event){
-    $(this).find('.toggle-button').removeClass('icon-menu').addClass('icon-close');
-    $('.button.button-menu').one('click', switchToMenuBtn);       
-};
-var switchToMenuBtn = function(){
-      $(this).find('.toggle-button').removeClass('icon-close').addClass('icon-menu'); 
-    $('.button.button-menu').one('click', switchToXBtn);       
-};
 
-$('.button.button-menu').one('click', switchToXBtn);
+//
+//var switchToXBtn = function(event){
+//    $(this).find('.toggle-button').removeClass('icon-menu').addClass('icon-close');
+//    $('.button.button-menu').one('click', switchToMenuBtn);       
+//
+//    var btn = $(this);
+//    $('.drawer').mouseleave(function(){
+//       $('body').one('click', function(){
+//                        $('.button.button-menu').trigger('click'); 
+//        $('.drawer').unbind('mouseleave');        
+//    });
+//    });
+//    
+////    $('.header').mouseleave(function(){
+////       $('body').one('click', function(){
+////            $('.button.button-menu').trigger('click'); 
+////                $('.header').unbind('mouseleave');    
+////       });
+////       });
+//    };
+//    
+//   
+//
+////        $('.button.button-menu').trigger('click');  
+//
+//var switchToMenuBtn = function(){
+//      $(this).find('.toggle-button').removeClass('icon-close').addClass('icon-menu'); 
+//    $('.button.button-menu').one('click', switchToXBtn);       
+//};
+//
+//$('.button.button-menu').one('click', switchToXBtn);
